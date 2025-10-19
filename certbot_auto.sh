@@ -297,3 +297,22 @@ echo "Auto-renew:   handled by certbot's systemd timer (via snap)."
 echo "Deploy hook:  $HOOK_FILE (reloads your web server after renew)"
 echo "Logs:         /var/log/letsencrypt/letsencrypt.log"
 echo "============================================================"
+
+# sudo bash certbot_auto.sh
+
+# sudo SERVER_TYPE=nginx \
+#      DOMAINS="example.com,www.example.com" \
+#      EMAIL="admin@example.com" \
+#      REDIRECT=y \
+#      STAGING=n \
+#      KEY_TYPE=ecdsa \
+#      EC_CURVE=secp384r1 \
+#      bash certbot_auto.sh
+
+
+# sudo SERVER_TYPE=webroot \
+#      WEBROOT_PATH="/var/www/html" \
+#      DOMAINS="example.com" \
+#      EMAIL="ops@example.com" \
+#      REDIRECT=n \
+#      bash certbot_auto.sh
